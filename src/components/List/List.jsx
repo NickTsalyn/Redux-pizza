@@ -13,14 +13,14 @@ import {
 
 const List = () => {
   const dispatch = useDispatch();
-  const { items, status } = useSelector(state => state.pizzas);
+  const { items } = useSelector(state => state.pizzas);
   const { items: cart } = useSelector(state => state.cart);
 
  
 
   useEffect(() => {
     dispatch(fetchPizzas());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="section">
