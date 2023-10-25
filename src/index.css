@@ -13,3 +13,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+
+.active {
+  border: 3px solid green;
+}
+
+.inactive {
+  border: 3px solid red;
+}
+
+.container {
+  padding: 45px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url('./images/logo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  padding-bottom: 40px;
+}
