@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <PersistGate persistor={persistor} loading={null}>
       <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename="/Redux-pizza">
           <App />
         </BrowserRouter>
       </Provider>

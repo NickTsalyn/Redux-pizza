@@ -2,21 +2,31 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from 'redux/cartSlice';
 import { fetchPizzas } from 'redux/pizzaSlice';
+
+
 import {
+  AddToCartBtn,
   BtnContainer,
+  CartBtnContainer,
+  CartMoveBtn,
+  CartWrapper,
   DescriptionBtn,
   Img,
   ListStyled,
   ListTitle,
+  Minus,
+  Plus,
+  PlusWhite,
+  PriceText,
   TypeBtn,
 } from './List.styled';
 
 const List = () => {
   const dispatch = useDispatch();
   const { items } = useSelector(state => state.pizzas);
-  const { items: cart } = useSelector(state => state.cart);
+  const { items: cart, quantity } = useSelector(state => state.cart);
 
- 
+  console.log(cart);
 
   useEffect(() => {
     dispatch(fetchPizzas());
@@ -28,7 +38,7 @@ const List = () => {
         {items.map(({ id, title, imageUrl, types, sizes, price }) => {
           const isItemInCart = cart.find(item => item.id === id);
           return (
-            <li key={id} >
+            <li key={id}>
               <Img src={imageUrl} alt={title} />
               <ListTitle>{title}</ListTitle>
               <DescriptionBtn>
@@ -43,22 +53,53 @@ const List = () => {
                   ))}
                 </BtnContainer>
               </DescriptionBtn>
-              <p>${price}</p>
-              {isItemInCart ? (
-                <button onClick={() => dispatch(removeFromCart(id))}>
-                  Remove from Cart
-                </button>
-              ) : (
-                <button
-                  onClick={() =>
-                    dispatch(
-                      addToCart({ id, title, imageUrl, types, sizes, price })
-                    )
-                  }
-                >
-                  Add to Cart
-                </button>
-              )}
+              <CartWrapper>
+                <PriceText>${price}</PriceText>
+                {isItemInCart ? (
+                  <CartBtnContainer>
+                    <CartMoveBtn>
+                      <Minus onClick={() => dispatch(removeFromCart(id))} />
+                    </CartMoveBtn>
+                    <span className='quantity'>{quantity}</span>
+                    <CartMoveBtn>
+                      <Plus
+                        onClick={() =>
+                          dispatch(
+                            addToCart({
+                              id,
+                              title,
+                              imageUrl,
+                              types,
+                              sizes,
+                              price,
+                            })
+                          )
+                        }
+                      />
+                    </CartMoveBtn>
+                  </CartBtnContainer>
+                ) : (
+                  <AddToCartBtn
+                    onClick={() =>
+                      dispatch(
+                        addToCart({
+                          id,
+                          title,
+                          imageUrl,
+                          types,
+                          sizes,
+                          price,
+                        })
+                      )
+                    }
+                  >
+                    <span className='plus-minus'>
+                      <PlusWhite />
+                    </span>
+                    <span className="text-color">Add</span>
+                  </AddToCartBtn>
+                )}
+              </CartWrapper>
             </li>
           );
         })}
