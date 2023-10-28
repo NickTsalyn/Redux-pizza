@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Redux-pizza/static/css/main.15045b97.css",
-    "main.js": "/Redux-pizza/static/js/main.817a7a3f.js",
+    "main.js": "/Redux-pizza/static/js/main.08956f05.js",
     "static/js/724.0df3316d.chunk.js": "/Redux-pizza/static/js/724.0df3316d.chunk.js",
     "static/js/327.4cea56dc.chunk.js": "/Redux-pizza/static/js/327.4cea56dc.chunk.js",
     "static/js/387.14aa8364.chunk.js": "/Redux-pizza/static/js/387.14aa8364.chunk.js",
     "static/js/716.8647b737.chunk.js": "/Redux-pizza/static/js/716.8647b737.chunk.js",
     "index.html": "/Redux-pizza/index.html",
     "main.15045b97.css.map": "/Redux-pizza/static/css/main.15045b97.css.map",
-    "main.817a7a3f.js.map": "/Redux-pizza/static/js/main.817a7a3f.js.map",
+    "main.08956f05.js.map": "/Redux-pizza/static/js/main.08956f05.js.map",
     "724.0df3316d.chunk.js.map": "/Redux-pizza/static/js/724.0df3316d.chunk.js.map",
     "327.4cea56dc.chunk.js.map": "/Redux-pizza/static/js/327.4cea56dc.chunk.js.map",
     "387.14aa8364.chunk.js.map": "/Redux-pizza/static/js/387.14aa8364.chunk.js.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.15045b97.css",
-    "static/js/main.817a7a3f.js"
+    "static/js/main.08956f05.js"
   ]
 }
