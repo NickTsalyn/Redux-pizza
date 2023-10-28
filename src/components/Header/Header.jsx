@@ -6,6 +6,7 @@ import {
   HeaderContainer,
   Input,
   LogoContainer,
+  Text,
 } from './Header.styled';
 import { FiShoppingCart } from 'react-icons/fi';
 
@@ -28,11 +29,11 @@ const Header = () => {
             <Input type="text" />
           </Form>
           <CartButton>
-            <span>${sum} |</span>
-            <span>
+            <Text>${sum} |</Text>
+            <Text>
               {' '}
               <FiShoppingCart /> {counter}
-            </span>
+            </Text>
           </CartButton>
         </FormContainer>
       </HeaderContainer>

@@ -38,3 +38,11 @@ export const LogoContainer = styled.div`
 display: flex;
 column-gap: 18px;
 `
+
+export const Text = styled.span`
+  width: 58px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+`;
